@@ -10,4 +10,44 @@ body, html {
     display: flex;
     justify-content: center; /* Horizontally center content */
     align-items: center; /* Vertically center content */
+    font-family: 'Jacquard 12', sans-serif;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;  /* Center horizontally, adjust if needed */
+    align-items: center;      /* Center vertically, adjust if needed */
+}
+
+div {
+    text-align: center;
+}
+
+#main-menu a {
+    font-size: 50px; /* Makes the text bigger */
+    color: mediumblue; /* Change this color to any you prefer */
+    text-decoration: none; /* Removes underline from links */
+    margin: 10px 0; /* Adds space between the links */
+}
+
+#main-menu a:hover {
+    color: rgb(255, 233, 111); /* Change to any hover color you like */
+}
+
+#main-menu a:focus {
+    outline: none;
+}
+
+/* Footer styling */
+footer {
+    color: #dddddd;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
 }
