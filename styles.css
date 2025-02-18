@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none; /* Hide the default cursor */
 }
 
 body, html {
@@ -12,6 +13,21 @@ body, html {
     align-items: center; /* Vertically center content */
     font-family: 'Jacquard 12', sans-serif;
     flex-direction: column;
+
+ 
+}
+
+#custom-cursor {
+    position: fixed;
+    pointer-events: none; /* Allows clicking through the element */
+    transform: translate(-16px, -2px); /* Adjust to align the arrow’s tip with the actual pointer position */
+    z-index: 9999;
+}
+
+/* Optional: Control the size of the arrow image */
+#custom-cursor img {
+    width: 24px; /* Comically bigger size */
+    height: auto;
 }
 
 main {
@@ -34,7 +50,7 @@ div {
 
 #main-menu a:hover {
     color: transparent; /* Make fill transparent */
-    -webkit-text-stroke: 2px red; /* Outline effect */
+    -webkit-text-stroke: 2px blue; /* Outline effect */
 }
 
 #main-menu a:focus {

@@ -22,7 +22,11 @@
 
     <title>nab's logs</title>
 </head>
+
 <body>
+    <div id="custom-cursor">
+        <img src="assets/crosshair.png" alt="Custom Cursor">
+    </div>
     <main>
         <div id="main-menu">
             <a href="about.html">about me</a> <br>
@@ -35,5 +39,12 @@
     <footer>
         <p>&copy; 2025 laladupsi. All rights reserved.</p>
     </footer>
+    <script>
+            document.addEventListener('mousemove', (e) => {
+            const cursor = document.getElementById('custom-cursor');
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
 </body>
 </html>
