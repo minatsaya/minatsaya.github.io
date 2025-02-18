@@ -1,1 +1,34 @@
-My logs
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logs Archive</title>
+  <link rel="stylesheet" href="logs.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar Archive List -->
+    <aside class="log-list">
+      <h2>Logs Archive</h2>
+      <ul>
+        <li class="log-item" data-id="1">Log Entry 1 - Feb 18, 2025</li>
+        <li class="log-item" data-id="2">Log Entry 2 - Feb 17, 2025</li>
+        <li class="log-item" data-id="3">Log Entry 3 - Feb 16, 2025</li>
+      </ul>
+    </aside>
+
+     <!-- Dark overlay -->
+     <div class="overlay" id="overlay"></div>
+
+    <!-- Side Peek View Panel -->
+    <div id="sidePanel" class="side-panel">
+      <button id="closePanel">&times;</button>
+      <h2 id="logTitle"></h2>
+      <div id="logContent"></div>
+    </div>
+  </div>
+
+  <script src="logs.js"></script>
+</body>
+</html>
