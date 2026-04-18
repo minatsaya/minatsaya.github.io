@@ -57,8 +57,14 @@ main {
 
 #contacs-list {
   text-align: left;
+  vertical-align: auto;
 }
 
+.container {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+}
 #contacts a {
   font-size: 20px;
   font-family: monospace;
