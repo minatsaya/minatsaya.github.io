@@ -1,4 +1,4 @@
-fetch('coolstuff.json')
+fetch('data/coolstuff.json')
   .then(res => res.json())
   .then(posts => {
     const wall = document.getElementById("wall");

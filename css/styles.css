@@ -1,22 +1,17 @@
-/* Global reset for margins and paddings */
-* {
+html, body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    cursor: none; /* Hide the default cursor */
-}
-
-body, html {
-    height: 100%; /* Ensure full height of the viewport */
-    display: flex;
-    justify-content: center; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
     font-family: 'Jacquard 12', sans-serif;
-    flex-direction: column;
-
- 
+    cursor: none;
 }
 
+body.landing main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
 #custom-cursor {
     position: fixed;
     pointer-events: none; /* Allows clicking through the element */
@@ -45,11 +40,7 @@ body, html {
   }
 
 main {
-    flex: 1;
-    display: flex;
-    justify-content: center;  /* Center horizontally, adjust if needed */
-    align-items: center;      /* Center vertically, adjust if needed */
-    gap: 40px;
+    display: block;
 }
 
 div {
@@ -62,7 +53,7 @@ div {
     width: fit-content;
     max-width: 300px;
     padding: 10px;
-  }
+}
 
 #minat p {
     font-size: 18px;

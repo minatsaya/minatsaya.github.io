@@ -1,7 +1,8 @@
-main {
-    display: flex; 
-    align-items: center;      /* Center vertically, adjust if needed */
-    gap: 40px;
+body.about main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 60px;
 }
 
 #main-menu {
