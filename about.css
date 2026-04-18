@@ -1,0 +1,65 @@
+main {
+    display: flex; 
+    align-items: center;      /* Center vertically, adjust if needed */
+    gap: 40px;
+}
+
+#back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: blue;
+  }
+
+  #back-button:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px blue;
+  }
+
+#main-menu {
+    justify-content: center; 
+    display: flex;
+    gap: 40px;
+}
+
+#bio, #my-minat {
+    flex: 1;
+}
+#bio {
+    text-align: right;
+}
+
+#bio p{
+    font-size: 50px;
+}
+
+#my-minat{
+    text-align: left;
+}
+#my-minat p{
+    font-family: monospace;
+    font-size: 15px;
+}
+
+#contacts {
+    margin-top: 30px;
+    text-align: right;
+
+  }
+  
+  #contacts p {
+    font-size: 30px;
+    margin: 0 0 5px 0;
+  }
+  
+  #contacts a {
+    font-size: 30px;
+    display: block;
+    margin: 0;
+  }
+#contacts a:hover {
+    color: transparent; /* Make fill transparent */
+    -webkit-text-stroke: 1.2px blue; /* Outline effect */
+}

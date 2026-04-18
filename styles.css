@@ -35,12 +35,28 @@ main {
     display: flex;
     justify-content: center;  /* Center horizontally, adjust if needed */
     align-items: center;      /* Center vertically, adjust if needed */
+    gap: 40px;
 }
 
 div {
     text-align: center;
 }
 
+#minat {
+    font-family: monospace;
+    text-align: left;
+    width: fit-content;
+    max-width: 300px;
+    padding: 10px;
+  }
+
+#minat p {
+    font-size: 18px;
+}
+
+#main-menu {
+    text-align: right;
+}
 #main-menu a {
     font-size: 50px; /* Makes the text bigger */
     color: blue; /* Change this color to any you prefer */
@@ -51,6 +67,11 @@ div {
 #main-menu a:hover {
     color: transparent; /* Make fill transparent */
     -webkit-text-stroke: 2px blue; /* Outline effect */
+}
+
+p {
+    font-size: 25px;
+    color: blue;
 }
 
 #main-menu a:focus {
