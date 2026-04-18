@@ -30,6 +30,20 @@ body, html {
     height: auto;
 }
 
+#back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: blue;
+  }
+
+  #back-button:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px blue;
+  }
+
 main {
     flex: 1;
     display: flex;
