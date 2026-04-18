@@ -1,0 +1,37 @@
+#wall {
+    column-count: 3;
+    column-gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+.item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid blue;
+    padding: 12px;
+}
+
+.item:hover {
+    border-color: greenyellow;
+}
+
+.item img {
+    width: 100%;      /* fill the item width */
+    height: auto;     /* keep aspect ratio */
+    display: block;   /* remove weird inline spacing */
+    object-fit: cover;
+}
+.item p {
+    margin-top: 8px;
+}
+
+html, body {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: auto !important;
+    margin-top: 2%;
+  }
+  
