@@ -44,22 +44,35 @@ main {
 }
 
 #contacts {
-    margin-top: 30px;
-    text-align: right;
+  justify-content: center; 
+  display: flex;
+  gap: 40px;
+}
+  
+#contacts #find-me p{
+  font-size: 50px;
+  margin: 0 0 5px 0;
+  text-align: right;
+}
 
-  }
-  
-  #contacts p {
-    font-size: 30px;
-    margin: 0 0 5px 0;
-  }
-  
-  #contacts a {
-    font-size: 30px;
-    display: block;
-    margin: 0;
-  }
+#contacs-list {
+  text-align: left;
+}
+
+#contacts a {
+  font-size: 20px;
+  font-family: monospace;
+  display: block;
+  margin: 0;
+  text-align: left;
+}
+
+a {
+  font-size: 50px; /* Makes the text bigger */
+    color: blue; /* Change this color to any you prefer */
+    text-decoration: none; /* Removes underline from links */
+    margin: 15px 0; /* Adds space between the links */
+}
 #contacts a:hover {
-    color: transparent; /* Make fill transparent */
-    -webkit-text-stroke: 1.2px blue; /* Outline effect */
+    color: rgb(195, 255, 0);
 }
