@@ -1,53 +1,44 @@
-// Sample log data
-const logData = {
-  1: {
-    title: "Log Entry 1 - Feb 18, 2025",
-    content: "This is the content of Log Entry 1. It contains details about today's progress."
-  },
-  2: {
-    title: "Log Entry 2 - Feb 17, 2025",
-    content: "This is the content of Log Entry 2. Discussing yesterday's key moments."
-  },
-  3: {
-    title: "Log Entry 3 - Feb 16, 2025",
-    content: "This is the content of Log Entry 3. Some thoughts and reflections."
-  }
-};
-
-// Get elements
-const logItems = document.querySelectorAll(".log-item");
-const sidePanel = document.getElementById("sidePanel");
-const overlay = document.getElementById("overlay");
-const closePanelBtn = document.getElementById("closePanel");
+const logList = document.getElementById("logList");
 const logTitle = document.getElementById("logTitle");
 const logContent = document.getElementById("logContent");
 
-// Open panel and update content
-logItems.forEach((item) => {
-  item.addEventListener("click", () => {
-    const logId = item.getAttribute("data-id");
-
-    if (logData[logId]) {
-      logTitle.textContent = logData[logId].title;
-      logContent.textContent = logData[logId].content;
-
-      // Show side panel and overlay
-      sidePanel.classList.add("active");
-      overlay.classList.add("active");
+async function loadLogs() {
+  try {
+    const response = await fetch("data/logs.json");
+    if (!response.ok) {
+      throw new Error(`Request failed with status ${response.status}`);
     }
-  });
-});
 
-// Close panel function
-function closePanel() {
-  sidePanel.classList.remove("active");
-  overlay.classList.remove("active");
+    const logData = await response.json();
+    logList.addEventListener("click", (event) => {
+      const item = event.target.closest("[data-id]");
+      if (!item) return;
 
-  // Clear the content when the panel is closed
-  logTitle.textContent = "";
-  logContent.textContent = "";
+      const log = logData[item.dataset.id];
+      if (!log) return;
+
+      logTitle.textContent = log.title;
+      logContent.textContent = log.content;
+
+      logList.querySelectorAll(".log-item").forEach((logItem) => {
+        logItem.setAttribute("aria-current", String(logItem === item));
+      });
+    });
+
+    Object.entries(logData).forEach(([id, log]) => {
+      const item = document.createElement("li");
+      const button = document.createElement("button");
+      button.className = "log-item";
+      button.dataset.id = id;
+      button.type = "button";
+      button.textContent = log.title;
+      item.appendChild(button);
+      logList.appendChild(item);
+    });
+  } catch (error) {
+    console.error("Unable to load log data:", error);
+    logList.textContent = "Unable to load logs.";
+  }
 }
 
-// Event listeners for closing the panel
-closePanelBtn.addEventListener("click", closePanel);
-overlay.addEventListener("click", closePanel);
+loadLogs();

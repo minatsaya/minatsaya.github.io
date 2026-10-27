@@ -4,29 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Logs Archive</title>
-  <link rel="stylesheet" href="logs.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/logs.css" />
 </head>
 <body>
   <div class="container">
-    <!-- Sidebar Archive List -->
     <aside class="log-list">
       <h2>Logs Archive</h2>
-      <ul>
-        <li class="log-item" data-id="1">Log Entry 1 - Feb 18, 2025</li>
-        <li class="log-item" data-id="2">Log Entry 2 - Feb 17, 2025</li>
-        <li class="log-item" data-id="3">Log Entry 3 - Feb 16, 2025</li>
-      </ul>
+      <ul id="logList"></ul>
     </aside>
 
-     <!-- Dark overlay -->
-     <div class="overlay" id="overlay"></div>
-
-    <!-- Side Peek View Panel -->
-    <div id="sidePanel" class="side-panel">
-      <button id="closePanel">&times;</button>
-      <h2 id="logTitle"></h2>
+    <main class="log-view" aria-live="polite">
+      <h2 id="logTitle">Select a log to read</h2>
       <div id="logContent"></div>
-    </div>
+    </main>
   </div>
 
   <script src="js/logs.js"></script>
